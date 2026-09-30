@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+    </head>
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autenticação</title>
+  
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Conteúdo Principal -->
+  <main class="container-principal">
+
+    <!-- Viewport que esconde o formulário fora da área visível -->
+    <div class="forms-viewport">
+      
+      <!-- Container que desliza verticalmente -->
+      <div class="forms-wrapper" id="formsWrapper">
+
+        <!-- 1. FORMULÁRIO DE LOGIN -->
+        <section class="form-card">
+          <div class="form-header">
+            <a href="#" class="logo">Login<span>_</span></a>
+            <h3>Identifique-se para entrar</h3>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="login-nome">Nome</label>
+                <input type="text" id="login-nome" placeholder="Seu nome">
+                <span class="mensagem-erro" id="erro-login-nome"></span>
+              </div>
+              <div class="form-group">
+                <label for="login-sobrenome">Sobrenome</label>
+                <input type="text" id="login-sobrenome" placeholder="Seu sobrenome">
+                <span class="mensagem-erro" id="erro-login-sobrenome"></span>
+              </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="form-group">
+              <label for="login-email">E-mail</label>
+              <input type="email" id="login-email" placeholder="seu.email@exemplo.com">
+              <span class="mensagem-erro" id="erro-login-email"></span>
+            </div>
+
+            <!-- Senha -->
+            <div class="form-group">
+              <div class="senha-header">
+                <label for="login-senha">Senha</label>
+                <a href="#" class="esqueceu-senha">Esqueceu?</a>
+              </div>
+              <div class="input-senha-wrapper">
+                <input type="password" id="login-senha" placeholder="Digite sua senha">
+                <button type="button" id="btnToggleSenha" aria-label="Alternar visibilidade da senha">
+                  <i class="fa-solid fa-eye" id="iconeOlho"></i>
+                </button>
+              </div>
+              <span class="mensagem-erro" id="erro-login-senha"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Entrar na Conta</button>
+            <div id="mensagemStatus" class="mensagem-status"></div>
+          </form>
+
+          <!-- Botão para descer/mostrar cadastro -->
+          <div class="toggle-container">
+            <h4>Não tem uma conta?</h4>
+            <button type="button" id="btnIrParaCadastro" class="btn-toggle">Cadastre-se</button>
+          </div>
+        </section>
+
+        <!-- 2. FORMULÁRIO DE CADASTRO -->
+        <section class="form-card">
+          <div class="form-header">
+            <h2>Criar Conta</h2>
+          </div>
+          
+          <form id="cadastro_Form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cad-nome">Nome</label>
+                <input type="text" id="cad-nome" placeholder="Digite seu nome">
+                <span class="mensagem-erro" id="erro-cad-nome"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cad-sobrenome">Sobrenome</label>
+                <input type="text" id="cad-sobrenome" placeholder="Digite seu sobrenome">
+                <span class="mensagem-erro" id="erro-cad-sobrenome"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cad-email">E-mail</label>
+              <input type="email" id="cad-email" placeholder="seuemail@exemplo.com">
+              <span class="mensagem-erro" id="erro-cad-email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cad-senha">Senha</label>
+              <input type="password" id="cad-senha" placeholder="Mínimo 8 caracteres">
+              <span class="mensagem-erro" id="erro-cad-senha"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Cadastrar</button>
+            <div id="mensagem-sucesso" class="mensagem-status sucesso"></div>
+          </form>
+
+          <!-- Botão para voltar ao Login -->
+          <div class="toggle-container">
+            <h4>Já tem uma conta?</h4>
+            <button type="button" id="btnIrParaLogin" class="btn-toggle">Faça Login</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+  
+   <script src="js.js"></script>
+  <script src="jquery-script.js"></script>
+</body>
+</html>
+</html>
